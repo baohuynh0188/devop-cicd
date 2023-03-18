@@ -6,7 +6,7 @@ orbs:
 executors:
   docker-publisher:
     environment:
-      IMAGE_TAG: $DOCKER_HUB_USER_ID/devop-cicd:latest
+      IMAGE_TAG: $DOCKER_HUB_USER_ID/devop-cicd
     docker:
       - image: docker:stable
 
@@ -33,4 +33,4 @@ jobs:
           name: Push application Docker image
           command: |
             docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
-            docker push $IMAGE_TAG
+            docker push $IMAGE_TAG:latest
