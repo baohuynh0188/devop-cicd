@@ -6,7 +6,7 @@ orbs:
 executors:
   docker-publisher:
     environment:
-      IMAGE_TAG: $DOCKER_HUB_USER_ID/devop-cicd
+      IMAGE_TAG: baohuynh0188/devop-cicd
     docker:
       - image: docker:stable
 
