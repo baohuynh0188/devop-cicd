@@ -13,8 +13,7 @@ executors:
 jobs:
   build:
     working_directory: /devop-cicd
-    docker:
-      - image: docker:stable
+    executor: docker-publisher
     steps:
       - checkout
       # Set up a separate Docker environment to run `docker` commands in
